@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fff7ef" />
+    <meta name="description" content="Make learning to tell time a joyful little adventure with Zooky. Explore the clock, practise setting the hands, and play a time-telling quiz." />
+    <meta property="og:title" content="Zooky — Time made fun!" />
+    <meta property="og:description" content="A bright, playful place for kids to explore and learn to tell time." />
+    <meta property="og:image" content="assets/zooky-promo.png" />
+    <title>Zooky — Time made fun!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to the fun</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="#top" aria-label="Zooky home">
+          <span class="brand-mark" aria-hidden="true"><span>z</span><i></i></span>
+          <span class="brand-name">zooky<span>time</span></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+          <span class="menu-icon" aria-hidden="true"><span></span><span></span></span>
+          <span class="sr-only">Open menu</span>
+        </button>
+        <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+          <a href="#learn">How time works</a>
+          <a href="#clock-lab">Clock lab</a>
+          <a href="#play">Play a quiz</a>
+        </nav>
+        <a class="header-cta" href="#clock-lab">Let's play <span aria-hidden="true">↗</span></a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero section-shell" id="top" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> Big adventures happen one tick at a time</p>
+          <h1 id="hero-title">Time is an adventure.<br /><span>Let's make it fun!</span></h1>
+          <p class="hero-intro">Meet the clock, move its hands, and discover how time fits into all the little moments of your day.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#clock-lab">Explore the clock <span aria-hidden="true">→</span></a>
+            <a class="text-link" href="#learn">Let's learn the basics <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="hero-note"><span class="note-spark" aria-hidden="true">✦</span><span>Made for curious kids and the grown-ups cheering them on.</span></div>
+        </div>
+        <div class="hero-art-wrap">
+          <div class="art-sunburst" aria-hidden="true"></div>
+          <div class="art-sticker sticker-one" aria-hidden="true">TICK<br />TOCK!</div>
+          <span class="art-spark art-spark-one" aria-hidden="true">✦</span>
+          <span class="art-spark art-spark-two" aria-hidden="true">✧</span>
+          <figure class="promo-art">
+            <img src="assets/zooky-promo.png" alt="Zooky time-learning artwork, with a colourful clock logo, playful watches, and the words ‘Time made fun, for kids on the run!’" />
+          </figure>
+          <div class="art-caption"><span class="caption-watch" aria-hidden="true">◷</span><span>Every minute is a new discovery</span></div>
+        </div>
+      </section>
+
+      <section class="welcome-strip" aria-label="Zooky promise">
+        <div class="welcome-inner">
+          <p><span aria-hidden="true">🌈</span> Learn at your own pace</p>
+          <p><span aria-hidden="true">⭐</span> Little wins all the way</p>
+          <p><span aria-hidden="true">💛</span> Play together, grow together</p>
+        </div>
+      </section>
+
+      <section class="learn-section section-shell" id="learn" aria-labelledby="learn-title">
+        <div class="section-heading">
+          <p class="eyebrow eyebrow-purple">Your clock-telling superpowers</p>
+          <h2 id="learn-title">Every clock has a story.<br /><span>Here's how to read it.</span></h2>
+          <p>Two hands work together to tell us when it's time for something wonderful.</p>
+        </div>
+        <div class="lesson-grid">
+          <article class="lesson-card lesson-hour">
+            <div class="lesson-icon" aria-hidden="true"><span>↗</span></div>
+            <p class="card-kicker">Superpower 01</p>
+            <h3>Meet the short hand</h3>
+            <p>The little hand is the <strong>hour hand</strong>. It moves slowly and points to the hour we're in.</p>
+            <div class="mini-clock mini-hour" aria-hidden="true"><span class="mini-face"><i class="mini-hour-hand"></i><i class="mini-minute-hand"></i><b></b></span><span class="mini-caption">hour hand</span></div>
+          </article>
+          <article class="lesson-card lesson-minute">
+            <div class="lesson-icon" aria-hidden="true"><span>✳</span></div>
+            <p class="card-kicker">Superpower 02</p>
+            <h3>Meet the long hand</h3>
+            <p>The long <strong>minute hand</strong> shows how many minutes have passed. One number means five minutes!</p>
+            <div class="mini-clock mini-minute" aria-hidden="true"><span class="mini-face"><i class="mini-hour-hand"></i><i class="mini-minute-hand"></i><b></b></span><span class="mini-caption">minute hand</span></div>
+          </article>
+          <article class="lesson-card lesson-teamwork">
+            <div class="lesson-icon" aria-hidden="true"><span>♡</span></div>
+            <p class="card-kicker">Superpower 03</p>
+            <h3>Read them together</h3>
+            <p>Look at both hands. The short hand tells the hour; the long hand tells the minutes.</p>
+            <div class="lesson-callout"><span aria-hidden="true">☀️</span><span>At 3 o'clock, the long hand points straight up to 12!</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="clock-section" id="clock-lab" aria-labelledby="clock-title">
+        <div class="clock-section-inner section-shell">
+          <div class="section-heading clock-heading">
+            <p class="eyebrow eyebrow-yellow">Your turn, time explorer!</p>
+            <h2 id="clock-title">Welcome to the<br /><span>Zooky clock lab.</span></h2>
+            <p>Choose a time and watch the clock hands dance into place. Ready for a challenge? We've got one for you.</p>
+          </div>
+          <div class="lab-card">
+            <div class="lab-clock-column">
+              <div class="clock-card-top"><span class="live-dot" aria-hidden="true"></span><span>Your practice clock</span><span class="clock-badge">PLAY TIME</span></div>
+              <svg class="clock-face" id="practice-clock" viewBox="0 0 320 320" role="img" aria-label="Analog clock showing 3:00">
+                <circle class="clock-rim" cx="160" cy="160" r="150" />
+                <circle class="clock-inner" cx="160" cy="160" r="135" />
+                <g class="clock-ticks" id="practice-ticks" aria-hidden="true"></g>
+                <g class="clock-numbers" aria-hidden="true">
+                  <text x="160" y="54">12</text><text x="215" y="69">1</text><text x="255" y="109">2</text>
+                  <text x="269" y="167">3</text><text x="253" y="224">4</text><text x="215" y="266">5</text>
+                  <text x="160" y="281">6</text><text x="105" y="266">7</text><text x="67" y="224">8</text>
+                  <text x="51" y="167">9</text><text x="66" y="109">10</text><text x="105" y="69">11</text>
+                </g>
+                <g class="clock-hands" aria-hidden="true">
+                  <line class="hour-hand" id="practice-hour-hand" x1="160" y1="166" x2="160" y2="101" />
+                  <line class="minute-hand" id="practice-minute-hand" x1="160" y1="165" x2="160" y2="67" />
+                  <circle class="clock-pin" cx="160" cy="160" r="9" />
+                </g>
+              </svg>
+              <p class="spoken-time" id="spoken-time" aria-live="polite">It's three o'clock!</p>
+              <button class="hear-button" id="hear-time" type="button"><span aria-hidden="true">🔊</span> Hear the time</button>
+            </div>
+            <div class="lab-controls">
+              <div class="controls-heading"><span class="controls-icon" aria-hidden="true">✦</span><div><p class="card-kicker">Make the hands move</p><h3>Set your practice time</h3></div></div>
+              <p class="controls-help">Move the sliders or use the arrow keys. The hands will follow along!</p>
+              <div class="range-control">
+                <label for="hour-range"><span class="label-icon hour-color" aria-hidden="true">↗</span> Hour hand <output id="hour-output" for="hour-range">3</output></label>
+                <input id="hour-range" type="range" min="1" max="12" value="3" step="1" />
+                <div class="range-endpoints"><span>1 o'clock</span><span>12 o'clock</span></div>
+              </div>
+              <div class="range-control minute-control">
+                <label for="minute-range"><span class="label-icon minute-color" aria-hidden="true">✳</span> Minute hand <output id="minute-output" for="minute-range">00</output></label>
+                <input id="minute-range" type="range" min="0" max="55" value="0" step="5" />
+                <div class="range-endpoints"><span>00 minutes</span><span>55 minutes</span></div>
+              </div>
+              <div class="time-clue" id="time-clue"><span class="clue-star" aria-hidden="true">✦</span><p>At <strong>3:00</strong>, the minute hand is on 12. That's three o'clock!</p></div>
+              <div class="challenge-box">
+                <div class="challenge-head"><span aria-hidden="true">🎯</span><div><p class="card-kicker">A little challenge</p><h3>Can you set <span id="challenge-target">4:30</span>?</h3></div></div>
+                <p class="challenge-feedback" id="challenge-feedback" aria-live="polite">Use the sliders above, then check your clock.</p>
+                <div class="challenge-actions"><button class="button button-small button-check" id="check-clock" type="button">Check my clock</button><button class="button button-small button-next" id="new-challenge" type="button">New time <span aria-hidden="true">↻</span></button></div>
+                <p class="streak" id="streak" aria-live="polite"><span aria-hidden="true">✨</span> <span id="streak-count">0</span> little wins so far</p>
+              </div>
+            </div>
+          </div>
+          <p class="lab-footnote"><span aria-hidden="true">💡</span> Tip: the minute hand takes a full trip around the clock to make one hour.</p>
+        </div>
+      </section>
+
+      <section class="quiz-section section-shell" id="play" aria-labelledby="quiz-title">
+        <div class="quiz-copy">
+          <p class="eyebrow eyebrow-purple">A quick brain tickle</p>
+          <h2 id="quiz-title">Can you crack<br /><span>the clock code?</span></h2>
+          <p>Look at the clock, pick the time that sounds right, and collect a little win. There's no rush — you can play again whenever you like.</p>
+          <div class="quiz-progress"><span class="quiz-star" aria-hidden="true">★</span><span><strong id="quiz-score">0</strong> correct answers</span></div>
+          <button class="button button-primary quiz-next" id="next-quiz" type="button">Next question <span aria-hidden="true">→</span></button>
+          <p class="quiz-feedback" id="quiz-feedback" aria-live="polite">Choose the answer that matches the clock!</p>
+        </div>
+        <div class="quiz-card">
+          <div class="quiz-card-heading"><span class="quiz-sparkle" aria-hidden="true">✦</span><div><p class="card-kicker">Question of the moment</p><h3>What time is it?</h3></div><span class="question-mark" aria-hidden="true">?</span></div>
+          <svg class="clock-face quiz-clock-face" id="quiz-clock" viewBox="0 0 320 320" role="img" aria-label="Analog quiz clock">
+            <circle class="clock-rim" cx="160" cy="160" r="150" />
+            <circle class="clock-inner" cx="160" cy="160" r="135" />
+            <g class="clock-ticks" id="quiz-ticks" aria-hidden="true"></g>
+            <g class="clock-numbers" aria-hidden="true">
+              <text x="160" y="54">12</text><text x="215" y="69">1</text><text x="255" y="109">2</text>
+              <text x="269" y="167">3</text><text x="253" y="224">4</text><text x="215" y="266">5</text>
+              <text x="160" y="281">6</text><text x="105" y="266">7</text><text x="67" y="224">8</text>
+              <text x="51" y="167">9</text><text x="66" y="109">10</text><text x="105" y="69">11</text>
+            </g>
+            <g class="clock-hands" aria-hidden="true">
+              <line class="hour-hand" id="quiz-hour-hand" x1="160" y1="166" x2="160" y2="101" />
+              <line class="minute-hand" id="quiz-minute-hand" x1="160" y1="165" x2="160" y2="67" />
+              <circle class="clock-pin" cx="160" cy="160" r="9" />
+            </g>
+          </svg>
+          <div class="answer-options" id="answer-options" role="group" aria-label="Choose the time shown on the quiz clock"></div>
+          <p class="quiz-card-foot"><span aria-hidden="true">🌟</span> You're doing great just by giving it a go!</p>
+        </div>
+      </section>
+
+      <section class="closing-banner section-shell" aria-label="Keep exploring">
+        <div class="closing-sun" aria-hidden="true">☀</div>
+        <div><p class="eyebrow eyebrow-yellow">Every day has its own rhythm</p><h2>Keep wondering.<br /><span>Keep watching the clock.</span></h2></div>
+        <a class="button button-white" href="#top">Back to the top <span aria-hidden="true">↑</span></a>
+        <span class="closing-doodle closing-doodle-one" aria-hidden="true">✦</span><span class="closing-doodle closing-doodle-two" aria-hidden="true">◷</span>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner"><a class="brand footer-brand" href="#top" aria-label="Zooky home"><span class="brand-mark" aria-hidden="true"><span>z</span><i></i></span><span class="brand-name">zooky<span>time</span></span></a><p>Big smiles. Little ticks. A whole lot of learning.</p><span class="footer-note">Made for curious minds <span aria-hidden="true">♡</span></span></div>
+      <div class="footer-bottom"><span>© <span id="current-year"></span> Zooky Time</span><a href="#learn">Keep learning <span aria-hidden="true">↑</span></a></div>
+    </footer>
+  </body>
+</html>
