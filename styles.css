@@ -187,6 +187,32 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 .welcome-inner p { margin: 0; font-size: 14px; font-weight: 800; }
 .welcome-inner p span { margin-right: 8px; }
 
+/* Product gallery */
+.products-section { padding-block: 89px 95px; scroll-margin-top: 86px; }
+.products-heading { margin-bottom: 27px; }
+.product-filters { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 9px; margin-bottom: 27px; }
+.product-filter { display: inline-flex; align-items: center; gap: 9px; min-height: 41px; padding: 8px 14px; color: #675b73; background: #fff; border: 1px solid #eee4f1; border-radius: 999px; cursor: pointer; font-size: 12px; font-weight: 900; transition: color .18s ease, background .18s ease, border .18s ease, transform .18s ease; }
+.product-filter span { display: inline-grid; min-width: 22px; height: 22px; place-items: center; color: #806d96; background: #f2edf7; border-radius: 50%; font-size: 10px; }
+.product-filter:hover { color: var(--purple-deep); border-color: #cdb8ee; transform: translateY(-1px); }
+.product-filter.is-active { color: white; background: var(--purple); border-color: var(--purple); box-shadow: 0 3px 0 #5936ad; }
+.product-filter.is-active span { color: var(--purple-deep); background: #fff; }
+.product-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.product-card { min-width: 0; overflow: hidden; background: #fff; border: 1px solid #eee6f1; border-radius: 18px; box-shadow: 0 8px 22px rgba(60, 31, 78, .055); transition: transform .2s ease, box-shadow .2s ease; }
+.product-card:hover { transform: translateY(-3px); box-shadow: 0 13px 28px rgba(60, 31, 78, .1); }
+.product-card[hidden] { display: none; }
+.product-image-wrap { display: grid; height: 190px; place-items: center; padding: 10px; background: linear-gradient(145deg, #fffdfb, #fff7f3); border-bottom: 1px solid #f4edf0; }
+.product-image { width: 100%; height: 100%; object-fit: contain; border-radius: 10px; }
+.product-copy { padding: 13px 15px 15px; }
+.product-type { margin: 0 0 3px; color: var(--pink-deep); font-size: 9px; font-weight: 900; letter-spacing: 1px; text-transform: uppercase; }
+.product-title { margin: 0; color: var(--ink); font: 800 17px/1.2 var(--heading); }
+.product-color { margin: 5px 0 0; color: #8a8190; font-size: 11px; font-weight: 800; }
+.product-thumbnails { display: flex; align-items: center; gap: 7px; margin-top: 11px; }
+.product-thumb { width: 48px; height: 39px; padding: 3px; overflow: hidden; background: #fff; border: 1px solid #e9e1ec; border-radius: 8px; cursor: pointer; }
+.product-thumb img { width: 100%; height: 100%; object-fit: contain; }
+.product-thumb:hover { border-color: #bb9fe8; }
+.product-thumb.is-selected { border: 2px solid var(--purple); background: #f8f3ff; }
+.product-note { display: flex; align-items: center; justify-content: center; gap: 7px; margin: 22px 0 0; color: #82788a; font-size: 12px; font-weight: 800; text-align: center; }
+
 /* Lesson cards */
 .learn-section { padding-block: 96px 112px; }
 .section-heading { margin: 0 auto 49px; text-align: center; }
@@ -372,6 +398,11 @@ input[type="range"]::-moz-range-thumb { width: 9px; height: 9px; background: #ff
   .hero-art-wrap { width: min(100%, 475px); justify-self: center; }
   .welcome-inner { width: calc(100% - 40px); flex-wrap: wrap; justify-content: center; gap: 7px 26px; padding-block: 16px; }
   .welcome-inner p { font-size: 12px; }
+  .products-section { padding-block: 72px 79px; }
+  .product-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 13px; }
+  .product-image-wrap { height: 176px; }
+  .product-copy { padding: 12px; }
+  .product-title { font-size: 16px; }
   .learn-section { padding-block: 75px 82px; }
   .section-heading { margin-bottom: 34px; }
   .lesson-grid { grid-template-columns: 1fr; gap: 15px; }
@@ -414,6 +445,16 @@ input[type="range"]::-moz-range-thumb { width: 9px; height: 9px; background: #ff
   .art-caption { padding: 7px 11px; font-size: 10px; }
   .welcome-inner { gap: 6px 13px; }
   .welcome-inner p { font-size: 10px; }
+  .products-section { padding-block: 61px 68px; }
+  .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .product-image-wrap { height: 145px; padding: 7px; }
+  .product-copy { padding: 10px 11px 12px; }
+  .product-title { font-size: 14px; }
+  .product-color { font-size: 10px; }
+  .product-thumbnails { gap: 5px; margin-top: 9px; }
+  .product-thumb { width: 42px; height: 34px; }
+  .product-filter { min-height: 37px; padding: 7px 10px; font-size: 10px; }
+  .product-filter span { min-width: 19px; height: 19px; font-size: 9px; }
   .section-heading h2, .quiz-copy h2 { font-size: 40px; }
   .section-heading > p:last-child { font-size: 14px; }
   .lesson-card { min-height: 300px; padding: 22px; }

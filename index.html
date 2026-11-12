@@ -28,6 +28,7 @@
           <span class="sr-only">Open menu</span>
         </button>
         <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+          <a href="#products">Our products</a>
           <a href="#learn">How time works</a>
           <a href="#clock-lab">Clock lab</a>
           <a href="#play">Play a quiz</a>
@@ -66,6 +67,22 @@
           <p><span aria-hidden="true">⭐</span> Little wins all the way</p>
           <p><span aria-hidden="true">💛</span> Play together, grow together</p>
         </div>
+      </section>
+
+      <section class="products-section section-shell" id="products" aria-labelledby="products-title">
+        <div class="section-heading products-heading">
+          <p class="eyebrow eyebrow-purple">A little something for every tick</p>
+          <h2 id="products-title">Meet the Zooky<br /><span>time collection.</span></h2>
+          <p>From colorful wristwatches to cheerful bedside clocks, find a time-telling buddy for every kind of day.</p>
+        </div>
+        <div class="product-filters" role="group" aria-label="Filter the Zooky product photos">
+          <button class="product-filter is-active" type="button" data-filter="all" aria-pressed="true">All styles <span>11</span></button>
+          <button class="product-filter" type="button" data-filter="watch" aria-pressed="false">Wristwatches <span>5</span></button>
+          <button class="product-filter" type="button" data-filter="analog-clock" aria-pressed="false">Twin-bell clocks <span>3</span></button>
+          <button class="product-filter" type="button" data-filter="digital-clock" aria-pressed="false">Digital clocks <span>3</span></button>
+        </div>
+        <div class="product-grid" id="product-grid" aria-live="polite"></div>
+        <p class="product-note"><span aria-hidden="true">🌟</span> Pick a favorite, then keep exploring the fun of telling time.</p>
       </section>
 
       <section class="learn-section section-shell" id="learn" aria-labelledby="learn-title">

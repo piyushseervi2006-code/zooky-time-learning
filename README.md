@@ -1,6 +1,6 @@
 # Zooky — Time made fun!
 
-A colourful, responsive time-learning website for children, built with plain HTML, CSS, and JavaScript. It includes a short lesson about the clock hands, a practice clock with a set-the-time challenge, and a multiple-choice quiz.
+A colourful, responsive time-learning website for children, built with plain HTML, CSS, and JavaScript. It includes a short lesson about the clock hands, an interactive practice clock, a multiple-choice quiz, and a product gallery with 30 photos grouped into 11 styles.
 
 ## Project files
 
@@ -11,7 +11,8 @@ zooky-time-learning/
 ├── script.js
 ├── README.md
 └── assets/
-    └── zooky-promo.png
+    ├── zooky-promo.png
+    └── products/          # 30 product photos used in the gallery
 ```
 
 ## Run it on your computer
@@ -36,6 +37,7 @@ When you update the project, upload the changed files to the same locations. Git
 
 - Navigation, links, buttons, and the practice sliders work with a keyboard.
 - Both analog clocks have text labels for screen readers; feedback is announced as activities are played.
+- Product filters and photo thumbnails are keyboard accessible.
 - The layout adapts to phone, tablet, and desktop widths and respects reduced-motion preferences.
 - The sound button uses the browser's built-in speech synthesis when available.
 - The uploaded Zooky promotional image is stored locally at `assets/zooky-promo.png`, so GitHub Pages can serve it with the rest of the site.

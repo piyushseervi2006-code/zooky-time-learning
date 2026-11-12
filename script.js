@@ -258,3 +258,109 @@ $("#current-year").textContent = String(new Date().getFullYear());
 updatePracticeClock();
 updateClock(clockParts.quiz, quizTime.hour, quizTime.minute, "Analog quiz clock");
 renderQuizOptions();
+
+/* Product photos: the thumbnails let visitors browse the supplied views. */
+const productGrid = $("#product-grid");
+const productFilters = [...document.querySelectorAll(".product-filter")];
+const productCatalog = [
+  { category: "watch", type: "Wristwatch", color: "Purple", name: "learning wristwatch", photos: ["0C1A2307.png", "0C1A2309.png", "0C1A2311.png"] },
+  { category: "watch", type: "Wristwatch", color: "Pink", name: "learning wristwatch", photos: ["0C1A2331.png", "0C1A2313.png", "0C1A2333.png"] },
+  { category: "watch", type: "Wristwatch", color: "Red", name: "learning wristwatch", photos: ["0C1A2351.png", "0C1A2342.png", "0C1A2347.png"] },
+  { category: "watch", type: "Wristwatch", color: "Aqua", name: "learning wristwatch", photos: ["0C1A2374.png", "0C1A2353.png", "0C1A2365.png"] },
+  { category: "watch", type: "Wristwatch", color: "Black", name: "learning wristwatch", photos: ["0C1A2386.png", "0C1A2377.png", "0C1A2381.png"] },
+  { category: "analog-clock", type: "Twin-bell clock", color: "Pink", name: "alarm clock", photos: ["0C1A2397.png", "0C1A2401.png"] },
+  { category: "analog-clock", type: "Twin-bell clock", color: "Yellow", name: "alarm clock", photos: ["0C1A2406.png", "0C1A2413.png"] },
+  { category: "analog-clock", type: "Twin-bell clock", color: "Green", name: "alarm clock", photos: ["0C1A2430.png", "0C1A2434.png"] },
+  { category: "digital-clock", type: "Digital clock", color: "Lilac", name: "bedside clock", photos: ["0C1A2451.png", "0C1A2456.png", "0C1A2458.png"] },
+  { category: "digital-clock", type: "Digital clock", color: "Aqua blue", name: "bedside clock", photos: ["0C1A2461.png", "0C1A2472.png", "0C1A2477.png"] },
+  { category: "digital-clock", type: "Digital clock", color: "White", name: "bedside clock", photos: ["0C1A2492.png", "0C1A2494.png", "0C1A2506.png"] },
+];
+
+function productAlt(product) {
+  if (product.category === "watch") return `${product.color} Zooky analog learning wristwatch on a white background.`;
+  if (product.category === "analog-clock") return `${product.color} Zooky twin-bell alarm clock with an analog face.`;
+  return `${product.color} Zooky digital bedside clock displaying 10:10.`;
+}
+
+function makeProductImage(product, filename, className) {
+  const image = document.createElement("img");
+  image.className = className;
+  image.src = `assets/products/${filename}`;
+  image.alt = productAlt(product);
+  image.loading = "lazy";
+  image.decoding = "async";
+  return image;
+}
+
+function createProductCard(product) {
+  const card = document.createElement("article");
+  card.className = "product-card";
+  card.dataset.category = product.category;
+
+  const imageWrap = document.createElement("div");
+  imageWrap.className = "product-image-wrap";
+  const mainImage = makeProductImage(product, product.photos[0], "product-image");
+  imageWrap.append(mainImage);
+
+  const copy = document.createElement("div");
+  copy.className = "product-copy";
+  const type = document.createElement("p");
+  type.className = "product-type";
+  type.textContent = product.type;
+  const title = document.createElement("h3");
+  title.className = "product-title";
+  title.textContent = `${product.color} ${product.name}`;
+  const detail = document.createElement("p");
+  detail.className = "product-color";
+  detail.textContent = `${product.photos.length} product photos`;
+
+  const thumbnails = document.createElement("div");
+  thumbnails.className = "product-thumbnails";
+  thumbnails.setAttribute("role", "group");
+  thumbnails.setAttribute("aria-label", `Photos of the ${product.color.toLowerCase()} ${product.name}`);
+  product.photos.forEach((filename, index) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = `product-thumb${index === 0 ? " is-selected" : ""}`;
+    button.setAttribute("aria-label", `Show photo ${index + 1} of ${product.photos.length}`);
+    button.setAttribute("aria-pressed", String(index === 0));
+    const thumb = makeProductImage(product, filename, "");
+    thumb.alt = "";
+    thumb.setAttribute("aria-hidden", "true");
+    button.append(thumb);
+    button.addEventListener("click", () => {
+      mainImage.src = `assets/products/${filename}`;
+      mainImage.alt = productAlt(product);
+      thumbnails.querySelectorAll(".product-thumb").forEach((other) => {
+        const selected = other === button;
+        other.classList.toggle("is-selected", selected);
+        other.setAttribute("aria-pressed", String(selected));
+      });
+    });
+    thumbnails.append(button);
+  });
+
+  copy.append(type, title, detail, thumbnails);
+  card.append(imageWrap, copy);
+  return card;
+}
+
+function renderProducts(filter = "all") {
+  productGrid.replaceChildren();
+  productCatalog
+    .filter((product) => filter === "all" || product.category === filter)
+    .forEach((product) => productGrid.append(createProductCard(product)));
+}
+
+productFilters.forEach((button) => {
+  button.addEventListener("click", () => {
+    productFilters.forEach((filterButton) => {
+      const selected = filterButton === button;
+      filterButton.classList.toggle("is-active", selected);
+      filterButton.setAttribute("aria-pressed", String(selected));
+    });
+    renderProducts(button.dataset.filter);
+  });
+});
+
+renderProducts();
